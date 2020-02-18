@@ -1,6 +1,5 @@
 #import pygame
 import random
-import time
 from random import randint
 #sound=pygame.mixer.Sound("jumanji.wav")
 def take(item):

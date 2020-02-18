@@ -15,20 +15,21 @@ def healthCheck(selfHealth):
 def fight(item,enemy):
     selfHealth=20
     enemyHealth=random.randint(10,20)
-    damageAmountN=random.randint(5,7)
-    damageAmountH=random.randint(8,10)
-    damage=random.randint(0,2)
-    if damage==0:
-        print("%s missed! The attack did no damage and the %s had time to attack back."% (name, enemy) )
-        selfHealth=selfHealth-random.randint(4,7)
-        healthCheck(selfHealth)
-    elif damage==1:
-        print("%s's attack hit! the attack did %d damage "%(name, damageAmountN))
-        enemyHealth=enemyHealth-damageAmountN
-        healthCheck
-    else:
-        print("%s's attack hit a headshot! the attack did %d damage."%(name,damageAmountH))
-        healthCheck(selfHealth)
+    while enemyHealth > 0:
+        damageAmountN=random.randint(5,7)
+        damageAmountH=random.randint(8,10)
+        damage=random.randint(0,2)
+        if damage==0:
+            print("%s missed! The attack did no damage and the %s had time to attack back."% (name, enemy) )
+            selfHealth=selfHealth-random.randint(4,7)
+            healthCheck(selfHealth)
+        elif damage==1:
+            print("%s's attack hit! the attack did %d damage "%(name, damageAmountN))
+            enemyHealth=enemyHealth-damageAmountN
+            healthCheck
+        else:
+            print("%s's attack hit a headshot! the attack did %d damage."%(name,damageAmountH))
+            healthCheck(selfHealth)
 
 
 #print('Path to module:',pygame._file_)
@@ -39,7 +40,6 @@ if a == " Understood":
     b= input("good. Now choose your character. [Dr. Smolder Bravestone]  = 1. [Ruby Roundhouse] = 2. [Professor Shelly Oberon] = 3. [Franklin Finbar] = 4.\n")
     if b == " 1":
         name="Dr.Smolder Bravestone"
-       
 
     elif b == " 2":
         name="Ruby Roundhouse"

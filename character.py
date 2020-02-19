@@ -1,8 +1,10 @@
-class Character:
+class Entity:
 
 	def __init__(self, name):
-		self.health = 20
+		self.health = health
 		self.name = name
+
+	
 
 	
 

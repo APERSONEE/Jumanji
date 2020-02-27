@@ -48,10 +48,13 @@ while True:
 	if move[0] == 'run':
 		print('You choose to run.')
 
-	elif "item" in rooms[currentRoom] and move[1] in rooms[currentRoom]['item']:
+
+	elif "item" in rooms[currentRoom] and move[0] == "take":
 		#add the item to their inventory
-		inventory += move[1]
+		inventory += rooms[currentRoom]['item'].join(' ')
 		#display a helpful message
 		print(move[1] + ' got!')
 		#delete the item from the room
 		del rooms[currentRoom]['item']
+	else:
+		print('Does not work like that.')

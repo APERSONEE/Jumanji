@@ -1,3 +1,5 @@
+import random
+import time
 def introP():
     print("Welcome to Jumanji!")
     a=input("Here are your commands: [run] This lets you run away from your current location. [fight] This lets you attack any enemies you come across. [rest] this lets you sleep to regain health. [take] this lets you take an item you come across. [use] this lets you use the item you come across.  Type [Understood] if you understand.\n")
